@@ -19,12 +19,12 @@
                     <asp:Label class="h3" ID="lblBienvenida" runat="server" Text="Bienvenido/a al sistema"></asp:Label>
                 </div>
                 <div>
-                    <asp:Label ID="lblEmail" runat="server" Text="email"></asp:Label>
-                    <asp:TextBox ID="tbEmail" CssClass="form-control" runat="server" placeholder="Correo Electronico"></asp:TextBox>
+                    <asp:Label ID="lblEmail" runat="server" Text="Correo Electronico"></asp:Label>
+                    <asp:TextBox ID="tbEmail" CssClass="form-control" runat="server" placeholder="Inserte su Correo Electronico"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="lblPassword" runat="server" Text="Contrasena"></asp:Label>
-                    <asp:TextBox ID="tbPassword" CssClass="form-control" TextMode="Password" runat="server" placeholder="Contraseña"></asp:TextBox>
+                    <asp:TextBox ID="tbPassword" CssClass="form-control" TextMode="Password" runat="server" placeholder="Inserte su Contraseña"></asp:TextBox>
                 </div>
                 <div class="row">
                     <asp:Label ID="lblError" runat="server" CssClass="alert-danger" ></asp:Label>
