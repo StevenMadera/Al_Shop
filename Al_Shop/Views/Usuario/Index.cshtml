@@ -1,0 +1,49 @@
+﻿
+@{
+    if (Session["usuariologueado"] == null)
+    {
+        Response.Redirect("../login.aspx");
+    }
+    
+
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row" , style="padding-bottom:15px; padding-left: 10px;">
+    <a href="Nuevo" class="btn btn-primary">Nuevo Usuario</a>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Fecha Nac</th>
+                <th>Contraseña</th>
+            </tr>
+            @foreach (var usu in Model)
+            {
+                <tr>
+                    <td>@usu.Id</td>
+                    <td>@usu.Nombre</td>
+                    <td>@usu.Email</td>
+                    <td>@usu.Telefono</td>
+                    <td>@usu.Fechan.ToString("MM dd yyyy")</td>
+                    <td>@usu.Pass</td>
+                    <td>
+                        <a href="Editar/@usu.Id" class="btn btn-default">Editar</a>
+                    </td>
+                    <td>
+                        <a href="Eliminar/@usu.Id" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
